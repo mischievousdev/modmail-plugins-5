@@ -442,7 +442,7 @@ class Music(commands.Cog):
         ctx.voice_state.songs.remove(index - 1)
         await ctx.message.add_reaction('✅')
 
-   @commands.command(name='loop', aliases=['repeat'])
+   @commands.command(name='loop')
     async def _loop(self, ctx: commands.Context):
         """Loops the currently playing song.
         Invoke this command again to unloop the song.

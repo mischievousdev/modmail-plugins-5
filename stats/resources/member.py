@@ -67,7 +67,7 @@ class MemberResource:
             activitytype = m.activity.type.name.title()
             activitytype += " to" if activitytype == "Listening" else ""
 
-            embed.add_field(name="Activity", value=f"{activitytype} {m.activity.name}")
+            embed.add_field(name="Activiteit", value=f"{activitytype} {m.activity.name}")
 
         embed.add_field(name="Status", value=m.status.name.title())
         embed.add_field(name="Bijnaam", value=m.nick)

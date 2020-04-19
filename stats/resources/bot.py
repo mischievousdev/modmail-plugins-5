@@ -9,7 +9,7 @@ class BotResource:
         self.bot = bot
 
     def bot_embed(self):
-        """creëer een embed met de huidige informatie over uw bot."""
+        """Creëer een insluiting met de huidige informatie over uw bot."""
 
         bot: discord.ext.commands.Bot = self.bot
 

@@ -9,7 +9,7 @@ class BotResource:
         self.bot = bot
 
     def bot_embed(self):
-        """Create an embed containing the bot's information."""
+        """creëer een embed met de huidige informatie over uw bot."""
 
         bot: discord.ext.commands.Bot = self.bot
 
@@ -22,9 +22,9 @@ class BotResource:
         embed.set_author(name=f"{b}'s Stats")
 
         embed.add_field(name="Prefix", value=f"`{bot.prefix}` or {b.mention}")
-        embed.add_field(name="Latency", value=f"{bot.latency * 1000:.2f} ms")
-        embed.add_field(name="Uptime", value=bot.uptime)
-        embed.add_field(name="Created", value=format_time(b.created_at))
+        embed.add_field(name="Wachttijd", value=f"{bot.latency * 1000:.2f} ms")
+        embed.add_field(name="Online tijd", value=bot.uptime)
+        embed.add_field(name="gecreëerd", value=format_time(b.created_at))
 
         embed.set_thumbnail(url=b.avatar_url)
         embed.set_footer(text=f"Bot ID: {b.id}")

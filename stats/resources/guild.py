@@ -10,7 +10,7 @@ class GuildResource:
         self.color = color
 
     def guild_embed(self):
-        """Create an embed containing the guild's information."""
+        """Creëer een insltuiting met daarin de informatie van de server."""
 
         g: discord.Guild = self.guild
 
@@ -26,13 +26,13 @@ class GuildResource:
             name=f"Member Count",
             value=f"Online: {online}\nHumans: {humans}\nBots: {bots}\nMember Count: {g.member_count}",
         )
-        embed.add_field(name="Categories", value=len(g.categories))
-        embed.add_field(name="Text Channels", value=len(g.text_channels))
-        embed.add_field(name="Voice Channels", value=len(g.voice_channels))
-        embed.add_field(name="Roles", value=len(g.roles))
-        embed.add_field(name="Server Region", value=g.region.name.title())
-        embed.add_field(name="Server Owner", value=g.owner.mention)
-        embed.add_field(name="Created", value=format_time(g.created_at))
+        embed.add_field(name="Catagorieën", value=len(g.categories))
+        embed.add_field(name="Tekstkanalen", value=len(g.text_channels))
+        embed.add_field(name="Spraakkanelen", value=len(g.voice_channels))
+        embed.add_field(name="Rollen", value=len(g.roles))
+        embed.add_field(name="Server Regio", value=g.region.name.title())
+        embed.add_field(name="Server Eigenaar", value=g.owner.mention)
+        embed.add_field(name="Gecreëerd", value=format_time(g.created_at))
 
         embed.set_thumbnail(url=str(g.icon_url))
         embed.set_footer(text=f"Server ID: {g.id}")

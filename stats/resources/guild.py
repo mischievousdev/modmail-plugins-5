@@ -28,7 +28,7 @@ class GuildResource:
         )
         embed.add_field(name="Catagorieën", value=len(g.categories))
         embed.add_field(name="Tekstkanalen", value=len(g.text_channels))
-        embed.add_field(name="Spraakkanelen", value=len(g.voice_channels))
+        embed.add_field(name="Spraakkanalen", value=len(g.voice_channels))
         embed.add_field(name="Rollen", value=len(g.roles))
         embed.add_field(name="Server Regio", value=g.region.name.title())
         embed.add_field(name="Server Eigenaar", value=g.owner.mention)

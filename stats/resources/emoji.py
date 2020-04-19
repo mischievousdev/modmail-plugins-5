@@ -10,7 +10,7 @@ class EmojiResource:
         self.color = color
 
     def emoji_embed(self):
-        """Create an embed containing the emoji's information."""
+        """Maak een insluiting met de informatie van een emoji."""
 
         e: discord.Emoji = self.emoji
 
@@ -18,11 +18,11 @@ class EmojiResource:
 
         embed.set_author(name=f"{e.name.title()}'s Stats")
 
-        embed.add_field(name="Created", value=format_time(e.created_at))
-        embed.add_field(name="Guild Name", value=e.guild.name)
-        embed.add_field(name="Guild ID", value=e.guild_id)
-        embed.add_field(name="Animated", value=e.animated)
-        embed.add_field(name="Managed", value=e.managed)
+        embed.add_field(name="Gecreëerd", value=format_time(e.created_at))
+        embed.add_field(name="Server naam", value=e.guild.name)
+        embed.add_field(name="Server ID", value=e.guild_id)
+        embed.add_field(name="Geanimeerd", value=e.animated)
+        embed.add_field(name="Beheerd", value=e.managed)
 
         embed.set_thumbnail(url=str(e.url))
         embed.set_footer(text=f"Emoji ID: {e.id}")
